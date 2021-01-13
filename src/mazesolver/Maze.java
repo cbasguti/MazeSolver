@@ -99,7 +99,7 @@ public class Maze {
         printPath(paths.elementAt(a), a);
     }
 
-    public void printMaze(String[][] a){
+    public void printMazeColor(String[][] a){
         final String CYAN = "\u001B[36m";
         final String MORADO = "\u001B[35m";
         final String RESET = "\u001B[0m";
@@ -118,6 +118,15 @@ public class Maze {
                 }else{
                     System.out.print(a[i][j] + " ");
                 }
+            }
+            System.out.println();
+        }
+    }
+    
+    public void printMaze(String[][] a){
+        for (int i = 0; i < a.length; i++) { 
+            for (int j = 0; j < a[i].length; j++) {
+            	System.out.print(a[i][j] + " ");
             }
             System.out.println();
         }
@@ -144,6 +153,6 @@ public class Maze {
                 maze[y][x] = "2";
             } 
         }
-        printMaze(maze);
+        printMazeColor(maze);
     }
 }
